@@ -44,7 +44,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->zone_0->setVisible(0);
     ui->zone_1->setVisible(0);
     ui->zone_2->setVisible(0);
-    ui->zone0Alert->setVisible(0);
     checks[3]->setVisible(0);
     checks[4]->setVisible(0);
     ui->positive_pass->setVisible(0);
@@ -80,8 +79,8 @@ void MainWindow::replyread()
         ui->Speed_in->setText(QString::number(realspeed));
         ui->Speedom->setValue(realspeed);
         std::bitset<16> r32bits = std::bitset<16>(registr[2]); // rg31
-        if (r32bits[0] == 1) { ui->zone_0->setVisible(1); ui->zone0Alert->setVisible(1); form.show(); QApplication::beep();}
-        else { ui->zone_0->setVisible(0); ui->zone0Alert->setVisible(0);}
+        if (r32bits[0] == 1) { ui->zone_0->setVisible(1); form.show(); /*QApplication::beep();*/}
+        else { ui->zone_0->setVisible(0);}
         if (r32bits[1] == 1) { ui->zone_1->setVisible(1); }
         else { ui->zone_1->setVisible(0); }
         if (r32bits[0] == 1 && r32bits[1] == 1)

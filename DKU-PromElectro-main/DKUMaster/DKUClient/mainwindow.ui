@@ -996,21 +996,6 @@ background-color: rgb(76, 95, 170);</string>
      </item>
     </layout>
    </widget>
-   <widget class="QDial" name="zone0Alert">
-    <property name="geometry">
-     <rect>
-      <x>710</x>
-      <y>340</y>
-      <width>50</width>
-      <height>64</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 0, 4);
-color: rgb(255, 0, 4);
-alternate-background-color: rgb(255, 0, 4);</string>
-    </property>
-   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
