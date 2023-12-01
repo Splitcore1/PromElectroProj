@@ -80,7 +80,7 @@ void MainWindow::replyread()
         ui->Speedom->setValue(realspeed);
         std::bitset<16> r32bits = std::bitset<16>(registr[2]); // rg31
         if (r32bits[0] == 1) { ui->zone_0->setVisible(1); form.show(); /*QApplication::beep();*/}
-        else { ui->zone_0->setVisible(0);}
+        else { ui->zone_0->setVisible(0); form.hide();}
         if (r32bits[1] == 1) { ui->zone_1->setVisible(1); }
         else { ui->zone_1->setVisible(0); }
         if (r32bits[0] == 1 && r32bits[1] == 1)
