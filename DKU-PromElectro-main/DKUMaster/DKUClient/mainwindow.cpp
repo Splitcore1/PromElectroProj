@@ -157,9 +157,13 @@ void MainWindow::on_pBUdpStart_clicked()
     QHostAddress Adress(ui->PEServerIP->text());
     result = m_socket ->bind(Adress,Port.toInt());
     if(result)
+    {
         ui->pBPortStatus->setText("Открыт");
+    }
     else
+    {
         ui->pBPortStatus->setText("Ошибка!");
+    }
 }
 
 
