@@ -50,6 +50,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->negative_pass->setVisible(0);
     ui->slow_pass->setVisible(0);
     ui->slow_pass->setStyleSheet("color: rgb(255, 0, 0)");
+    m_socket = new QUdpSocket(this);
 }
 
 MainWindow::~MainWindow()
@@ -79,8 +80,8 @@ void MainWindow::replyread()
         ui->Speed_in->setText(QString::number(realspeed));
         ui->Speedom->setValue(realspeed);
         std::bitset<16> r32bits = std::bitset<16>(registr[2]); // rg31
-        if (r32bits[0] == 1) { ui->zone_0->setVisible(1); form.show(); /*QApplication::beep();*/}
-        else { ui->zone_0->setVisible(0); form.hide();}
+        if (r32bits[0] == 1) { ui->zone_0->setVisible(1);}
+        else { ui->zone_0->setVisible(0);}
         if (r32bits[1] == 1) { ui->zone_1->setVisible(1); }
         else { ui->zone_1->setVisible(0); }
         if (r32bits[0] == 1 && r32bits[1] == 1)
@@ -108,6 +109,19 @@ void MainWindow::replyread()
         else { ui->slow_pass->setVisible(0); }
         quint32 tmark = (registr[6] | (registr[7]<<16))/2000; // rg35 & rg36
         ui->tm_disp->setText(QString::number(tmark));
+        int Status = 0; //0 - нет поезда, 1 - есть поезд
+        if ((r32bits[0]==1)||(r32bits[1]==1))
+            Status = 1;
+        else
+            Status = 0;
+        QString RemotePort;
+        QByteArray mass;
+        QString message;
+        QHostAddress RemoteAddress(ui->PEClientIP->text());
+        RemotePort = ui->PEClientPort->text();
+        message = QString::number(Status);
+        mass = message.toUtf8();
+        m_socket->writeDatagram(mass,RemoteAddress,RemotePort.toInt());
     }
     else
     {
@@ -130,5 +144,28 @@ void MainWindow::on_connect_clicked()
         QTimer::singleShot(buff_time, this, &MainWindow::readrequest);
     }
     else { qDebug() << "Device connection error"; }
+}
+
+
+
+
+void MainWindow::on_pBUdpStart_clicked()
+{
+    QString Port;
+    bool result;
+    Port = ui->PEServerPort->text();
+    QHostAddress Adress(ui->PEServerIP->text());
+    result = m_socket ->bind(Adress,Port.toInt());
+    if(result)
+        ui->pBPortStatus->setText("Открыт");
+    else
+        ui->pBPortStatus->setText("Ошибка!");
+}
+
+
+void MainWindow::on_pBUdpStop_clicked()
+{
+    m_socket->close();
+    ui->pBPortStatus->setText("Закрыт");
 }
 

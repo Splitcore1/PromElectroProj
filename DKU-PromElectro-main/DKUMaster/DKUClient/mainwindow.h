@@ -6,7 +6,7 @@
 #include <QModbusRtuSerialClient>
 #include <QModbusReply>
 #include <QTimer>
-#include <zonealert.h>
+#include <QUdpSocket>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -22,18 +22,20 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    zoneAlert form;
     QModbusRtuSerialClient client;
     QModbusReply *repl;
     std::clock_t start_time;
     std::clock_t finish_time;
     int buff_time;
     std::vector<QCheckBox*> checks;
+    QUdpSocket* m_socket;
 
 private slots:
     void readrequest();
     void replyread();
     void on_connect_clicked();
     void on_zone0Alert_released();
+    void on_pBUdpStart_clicked();
+    void on_pBUdpStop_clicked();
 };
 #endif // MAINWINDOW_H
