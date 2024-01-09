@@ -1015,7 +1015,7 @@ background-color: rgb(76, 95, 170);</string>
      <string>Настройки сетевого подключения</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -1038,7 +1038,11 @@ background-color: rgb(76, 95, 170);</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="PEServerIP"/>
+        <widget class="QLineEdit" name="PEServerIP">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -1055,7 +1059,11 @@ background-color: rgb(76, 95, 170);</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="PEServerPort"/>
+        <widget class="QLineEdit" name="PEServerPort">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -1072,7 +1080,11 @@ background-color: rgb(76, 95, 170);</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="PEClientIP"/>
+        <widget class="QLineEdit" name="PEClientIP">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -1089,7 +1101,11 @@ background-color: rgb(76, 95, 170);</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="PEClientPort"/>
+        <widget class="QLineEdit" name="PEClientPort">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -1119,7 +1135,7 @@ background-color: rgb(76, 95, 170);</string>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>20</x>
