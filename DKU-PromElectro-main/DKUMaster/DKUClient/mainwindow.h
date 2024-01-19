@@ -37,5 +37,7 @@ private slots:
     void on_zone0Alert_released();
     void on_pBUdpStart_clicked();
     void on_pBUdpStop_clicked();
+    void on_connect_released();
+    void on_comports_activated(int index);
 };
 #endif // MAINWINDOW_H

@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>850</width>
-    <height>900</height>
+    <width>1000</width>
+    <height>825</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -21,14 +21,14 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>850</width>
-    <height>900</height>
+    <width>1000</width>
+    <height>825</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>850</width>
-    <height>900</height>
+    <width>1000</width>
+    <height>825</height>
    </size>
   </property>
   <property name="font">
@@ -45,15 +45,15 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(33, 42, 62);</string>
+   <string notr="true">background-color: rgb(21, 21, 26);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>9</x>
-      <y>107</y>
-      <width>371</width>
+      <x>29</x>
+      <y>77</y>
+      <width>441</width>
       <height>22</height>
      </rect>
     </property>
@@ -65,7 +65,8 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <family>Inter</family>
+      <pointsize>14</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -73,112 +74,29 @@
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>Диагностика и эксплуатационные признаки:</string>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="comports">
-    <property name="geometry">
-     <rect>
-      <x>66</x>
-      <y>39</y>
-      <width>221</width>
-      <height>26</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>10</pointsize>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(117, 129, 182);</string>
-    </property>
-    <property name="placeholderText">
-     <string>Выберите COM-порт</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>9</x>
-      <y>9</y>
-      <width>871</width>
-      <height>26</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="font">
-     <font>
-      <family>Tahoma</family>
-      <pointsize>16</pointsize>
-      <bold>true</bold>
-      <underline>false</underline>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>ДАТЧИК КОЛЕСА УНИФИЦИРОВАННЫЙ ДКУ-02</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="sen_adr">
-    <property name="geometry">
-     <rect>
-      <x>305</x>
-      <y>40</y>
-      <width>261</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>10</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(191, 191, 191);</string>
-    </property>
-    <property name="placeholderText">
-     <string>Введите адрес датчика</string>
+     <string>Диагностика и эксплуатационные признаки</string>
     </property>
    </widget>
    <widget class="QDial" name="zone_2">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>420</y>
-      <width>91</width>
-      <height>91</height>
+      <x>688</x>
+      <y>350</y>
+      <width>100</width>
+      <height>100</height>
      </rect>
     </property>
     <property name="sizePolicy">
-     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
       <horstretch>0</horstretch>
       <verstretch>0</verstretch>
      </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>90</width>
+      <height>90</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -186,7 +104,10 @@ background-color: rgb(117, 129, 182);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">QDial
+{
+	background-color: rgb(117, 126, 207);
+}</string>
     </property>
     <property name="minimum">
      <number>50</number>
@@ -211,19 +132,28 @@ background-color: rgb(117, 129, 182);</string>
     </property>
    </widget>
    <widget class="QDial" name="zone_0">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>164</x>
-      <y>418</y>
-      <width>91</width>
-      <height>91</height>
+      <x>546</x>
+      <y>350</y>
+      <width>100</width>
+      <height>100</height>
      </rect>
     </property>
     <property name="sizePolicy">
-     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
       <horstretch>0</horstretch>
       <verstretch>0</verstretch>
      </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>90</width>
+      <height>90</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -232,7 +162,14 @@ background-color: rgb(117, 129, 182);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">QDial
+{
+	background-color: rgb(117, 126, 207);
+}
+QDial:disabled
+{
+	background-color: rgb(117, 126, 207);
+}</string>
     </property>
     <property name="sliderPosition">
      <number>0</number>
@@ -247,10 +184,10 @@ background-color: rgb(117, 129, 182);</string>
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>133</x>
-      <y>509</y>
-      <width>621</width>
-      <height>31</height>
+      <x>509</x>
+      <y>449</y>
+      <width>461</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -280,73 +217,19 @@ background-color: rgb(117, 129, 182);</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_11">
-    <property name="geometry">
-     <rect>
-      <x>410</x>
-      <y>80</y>
-      <width>301</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>11</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>Время с момента запуска датчика (сек):</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="tm_disp">
-    <property name="geometry">
-     <rect>
-      <x>711</x>
-      <y>80</y>
-      <width>91</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>13</pointsize>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>ArrowCursor</cursorShape>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(186, 186, 186);</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="slow_pass">
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>290</y>
-      <width>391</width>
+      <x>499</x>
+      <y>289</y>
+      <width>471</width>
       <height>20</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <family>Inter SemiBold</family>
+      <pointsize>14</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -354,7 +237,7 @@ background-color: rgb(117, 129, 182);</string>
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>Медленное движение колеса над датчиком!</string>
+     <string>Медленное движение колеса над датчиком</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -363,10 +246,10 @@ background-color: rgb(117, 129, 182);</string>
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>650</x>
-      <y>550</y>
-      <width>41</width>
-      <height>18</height>
+      <x>849</x>
+      <y>469</y>
+      <width>71</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -377,7 +260,8 @@ background-color: rgb(117, 129, 182);</string>
     </property>
     <property name="font">
      <font>
-      <pointsize>10</pointsize>
+      <family>Inter SemiBold</family>
+      <pointsize>12</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -394,9 +278,9 @@ background-color: rgb(117, 129, 182);</string>
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>550</y>
-      <width>41</width>
+      <x>559</x>
+      <y>469</y>
+      <width>71</width>
       <height>18</height>
      </rect>
     </property>
@@ -408,7 +292,8 @@ background-color: rgb(117, 129, 182);</string>
     </property>
     <property name="font">
      <font>
-      <pointsize>10</pointsize>
+      <family>Inter SemiBold</family>
+      <pointsize>12</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -422,37 +307,15 @@ background-color: rgb(117, 129, 182);</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>449</x>
-      <y>191</y>
-      <width>181</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>13</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>Скорость :</string>
-    </property>
-   </widget>
    <widget class="QSlider" name="Speedom">
     <property name="enabled">
      <bool>false</bool>
     </property>
     <property name="geometry">
      <rect>
-      <x>393</x>
-      <y>232</y>
-      <width>481</width>
+      <x>500</x>
+      <y>200</y>
+      <width>471</width>
       <height>20</height>
      </rect>
     </property>
@@ -467,6 +330,10 @@ background-color: rgb(117, 129, 182);</string>
       <pointsize>13</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+    </property>
     <property name="maximum">
      <number>200</number>
     </property>
@@ -480,62 +347,14 @@ background-color: rgb(117, 129, 182);</string>
      <number>10</number>
     </property>
    </widget>
-   <widget class="QLabel" name="label_9">
-    <property name="geometry">
-     <rect>
-      <x>393</x>
-      <y>260</y>
-      <width>16</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>13</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>0</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_10">
-    <property name="geometry">
-     <rect>
-      <x>850</x>
-      <y>260</y>
-      <width>27</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>13</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>200</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-    </property>
-   </widget>
    <widget class="QCheckBox" name="r32_4">
     <property name="enabled">
      <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>390</y>
+      <x>30</x>
+      <y>400</y>
       <width>71</width>
       <height>24</height>
      </rect>
@@ -561,8 +380,8 @@ background-color: rgb(117, 129, 182);</string>
     </property>
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>430</y>
+      <x>30</x>
+      <y>440</y>
       <width>71</width>
       <height>24</height>
      </rect>
@@ -585,9 +404,9 @@ background-color: rgb(117, 129, 182);</string>
    <widget class="QLabel" name="negative_pass">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>380</y>
-      <width>69</width>
+      <x>517</x>
+      <y>319</y>
+      <width>221</width>
       <height>26</height>
      </rect>
     </property>
@@ -618,9 +437,9 @@ background-color: rgb(117, 129, 182);</string>
    <widget class="QLabel" name="positive_pass">
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>380</y>
-      <width>69</width>
+      <x>739</x>
+      <y>319</y>
+      <width>231</width>
       <height>26</height>
      </rect>
     </property>
@@ -651,22 +470,34 @@ background-color: rgb(117, 129, 182);</string>
    <widget class="QDial" name="zone_1">
     <property name="geometry">
      <rect>
-      <x>640</x>
-      <y>420</y>
-      <width>91</width>
-      <height>91</height>
+      <x>830</x>
+      <y>350</y>
+      <width>100</width>
+      <height>100</height>
      </rect>
     </property>
     <property name="sizePolicy">
-     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
       <horstretch>0</horstretch>
       <verstretch>0</verstretch>
      </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>90</width>
+      <height>90</height>
+     </size>
     </property>
     <property name="font">
      <font>
       <kerning>true</kerning>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDial
+{
+	background-color: rgb(117, 126, 207);
+}</string>
     </property>
     <property name="sliderPosition">
      <number>0</number>
@@ -681,124 +512,13 @@ background-color: rgb(117, 129, 182);</string>
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="connect">
-    <property name="geometry">
-     <rect>
-      <x>580</x>
-      <y>40</y>
-      <width>221</width>
-      <height>26</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>10</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(76, 95, 170);</string>
-    </property>
-    <property name="text">
-     <string>Подключить</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>450</x>
-      <y>150</y>
-      <width>181</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>13</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>Счетчик осей:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="axis_counter">
-    <property name="geometry">
-     <rect>
-      <x>640</x>
-      <y>150</y>
-      <width>191</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>13</pointsize>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>ArrowCursor</cursorShape>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(200, 200, 200);</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="Speed_in">
-    <property name="geometry">
-     <rect>
-      <x>640</x>
-      <y>190</y>
-      <width>191</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>13</pointsize>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>ArrowCursor</cursorShape>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(186, 186, 186);</string>
-    </property>
-   </widget>
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>140</y>
-      <width>351</width>
-      <height>236</height>
+      <x>30</x>
+      <y>110</y>
+      <width>391</width>
+      <height>291</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -815,21 +535,61 @@ background-color: rgb(76, 95, 170);</string>
        </property>
        <property name="font">
         <font>
-         <pointsize>10</pointsize>
+         <family>Inter</family>
+         <pointsize>12</pointsize>
+         <stylestrategy>PreferDefault</stylestrategy>
+         <kerning>true</kerning>
         </font>
        </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
+        <string notr="true">QCheckBox{
+color: rgb(255, 255, 255);
+
+}
+
+QCheckBox::indicator::unchecked{
+	height: 15px;
+	width: 15px;
+	background-color: rgb(255, 255, 255);
+	border: 2px solid white;
+	border-radius: 3px;
+}
+
+QCheckBox::indicator::checked{
+	height: 15px;
+	width: 15px;
+	background-color: rgb(117, 126, 207);
+	border: 2px solid white;
+	border-radius: 3px;
+}</string>
        </property>
        <property name="text">
         <string>Постороннее воздействие на ДКУ</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <property name="autoRepeat">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+       <property name="tristate">
+        <bool>false</bool>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QCheckBox" name="r32_14">
        <property name="enabled">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -839,11 +599,34 @@ background-color: rgb(76, 95, 170);</string>
        </property>
        <property name="font">
         <font>
-         <pointsize>10</pointsize>
+         <family>Inter</family>
+         <pointsize>12</pointsize>
         </font>
        </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
+        <string notr="true">QCheckBox{
+color: rgb(255, 255, 255);
+
+}
+
+QCheckBox::indicator::unchecked{
+	height: 15px;
+	width: 15px;
+	background-color: rgb(255, 255, 255);
+	border: 2px solid white;
+	border-radius: 3px;
+}
+
+QCheckBox::indicator::checked{
+	height: 15px;
+	width: 15px;
+	background-color: rgb(117, 126, 207);
+	border: 2px solid white;
+	border-radius: 3px;
+}</string>
        </property>
        <property name="text">
         <string>Отклонение сигналов генераторов от нормы</string>
@@ -853,7 +636,7 @@ background-color: rgb(76, 95, 170);</string>
      <item>
       <widget class="QCheckBox" name="r32_13">
        <property name="enabled">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -863,11 +646,31 @@ background-color: rgb(76, 95, 170);</string>
        </property>
        <property name="font">
         <font>
-         <pointsize>10</pointsize>
+         <family>Inter</family>
+         <pointsize>12</pointsize>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
+        <string notr="true">QCheckBox{
+color: rgb(255, 255, 255);
+
+}
+
+QCheckBox::indicator::unchecked{
+	height: 15px;
+	width: 15px;
+	background-color: rgb(255, 255, 255);
+	border: 2px solid white;
+	border-radius: 3px;
+}
+
+QCheckBox::indicator::checked{
+	height: 15px;
+	width: 15px;
+	background-color: rgb(117, 126, 207);
+	border: 2px solid white;
+	border-radius: 3px;
+}</string>
        </property>
        <property name="text">
         <string>Наличие постороннего металла в зоне ДКУ</string>
@@ -877,7 +680,7 @@ background-color: rgb(76, 95, 170);</string>
      <item>
       <widget class="QCheckBox" name="r32_2">
        <property name="enabled">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -887,11 +690,31 @@ background-color: rgb(76, 95, 170);</string>
        </property>
        <property name="font">
         <font>
-         <pointsize>10</pointsize>
+         <family>Inter</family>
+         <pointsize>12</pointsize>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
+        <string notr="true">QCheckBox{
+color: rgb(255, 255, 255);
+
+}
+
+QCheckBox::indicator::unchecked{
+	height: 15px;
+	width: 15px;
+	background-color: rgb(255, 255, 255);
+	border: 2px solid white;
+	border-radius: 3px;
+}
+
+QCheckBox::indicator::checked{
+	height: 15px;
+	width: 15px;
+	background-color: rgb(117, 126, 207);
+	border: 2px solid white;
+	border-radius: 3px;
+}</string>
        </property>
        <property name="text">
         <string>Обратное направление счета</string>
@@ -901,7 +724,7 @@ background-color: rgb(76, 95, 170);</string>
      <item>
       <widget class="QCheckBox" name="r32_10">
        <property name="enabled">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -911,11 +734,31 @@ background-color: rgb(76, 95, 170);</string>
        </property>
        <property name="font">
         <font>
-         <pointsize>10</pointsize>
+         <family>Inter</family>
+         <pointsize>12</pointsize>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
+        <string notr="true">QCheckBox{
+color: rgb(255, 255, 255);
+
+}
+
+QCheckBox::indicator::unchecked{
+	height: 15px;
+	width: 15px;
+	background-color: rgb(255, 255, 255);
+	border: 2px solid white;
+	border-radius: 3px;
+}
+
+QCheckBox::indicator::checked{
+	height: 15px;
+	width: 15px;
+	background-color: rgb(117, 126, 207);
+	border: 2px solid white;
+	border-radius: 3px;
+}</string>
        </property>
        <property name="text">
         <string>Съем ДКУ</string>
@@ -925,7 +768,7 @@ background-color: rgb(76, 95, 170);</string>
      <item>
       <widget class="QCheckBox" name="r32_8">
        <property name="enabled">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -935,11 +778,31 @@ background-color: rgb(76, 95, 170);</string>
        </property>
        <property name="font">
         <font>
-         <pointsize>10</pointsize>
+         <family>Inter</family>
+         <pointsize>12</pointsize>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
+        <string notr="true">QCheckBox{
+color: rgb(255, 255, 255);
+
+}
+
+QCheckBox::indicator::unchecked{
+	height: 15px;
+	width: 15px;
+	background-color: rgb(255, 255, 255);
+	border: 2px solid white;
+	border-radius: 3px;
+}
+
+QCheckBox::indicator::checked{
+	height: 15px;
+	width: 15px;
+	background-color: rgb(117, 126, 207);
+	border: 2px solid white;
+	border-radius: 3px;
+}</string>
        </property>
        <property name="text">
         <string>Начальная установка</string>
@@ -949,7 +812,7 @@ background-color: rgb(76, 95, 170);</string>
      <item>
       <widget class="QCheckBox" name="r32_11">
        <property name="enabled">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -959,11 +822,31 @@ background-color: rgb(76, 95, 170);</string>
        </property>
        <property name="font">
         <font>
-         <pointsize>10</pointsize>
+         <family>Inter</family>
+         <pointsize>12</pointsize>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
+        <string notr="true">QCheckBox{
+color: rgb(255, 255, 255);
+
+}
+
+QCheckBox::indicator::unchecked{
+	height: 15px;
+	width: 15px;
+	background-color: rgb(255, 255, 255);
+	border: 2px solid white;
+	border-radius: 3px;
+}
+
+QCheckBox::indicator::checked{
+	height: 15px;
+	width: 15px;
+	background-color: rgb(117, 126, 207);
+	border: 2px solid white;
+	border-radius: 3px;
+}</string>
        </property>
        <property name="text">
         <string>Чувствительность ниже нормы</string>
@@ -973,7 +856,7 @@ background-color: rgb(76, 95, 170);</string>
      <item>
       <widget class="QCheckBox" name="r32_9">
        <property name="enabled">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -983,11 +866,31 @@ background-color: rgb(76, 95, 170);</string>
        </property>
        <property name="font">
         <font>
-         <pointsize>10</pointsize>
+         <family>Inter</family>
+         <pointsize>12</pointsize>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
+        <string notr="true">QCheckBox{
+color: rgb(255, 255, 255);
+
+}
+
+QCheckBox::indicator::unchecked{
+	height: 15px;
+	width: 15px;
+	background-color: rgb(255, 255, 255);
+	border: 2px solid white;
+	border-radius: 3px;
+}
+
+QCheckBox::indicator::checked{
+	height: 15px;
+	width: 15px;
+	background-color: rgb(117, 126, 207);
+	border: 2px solid white;
+	border-radius: 3px;
+}</string>
        </property>
        <property name="text">
         <string>Неисправность ДКУ</string>
@@ -999,11 +902,17 @@ background-color: rgb(76, 95, 170);</string>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>580</y>
-      <width>191</width>
-      <height>16</height>
+      <x>30</x>
+      <y>470</y>
+      <width>381</width>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Inter SemiBold</family>
+      <pointsize>14</pointsize>
+     </font>
     </property>
     <property name="autoFillBackground">
      <bool>false</bool>
@@ -1018,17 +927,77 @@ background-color: rgb(76, 95, 170);</string>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>600</y>
-      <width>811</width>
-      <height>148</height>
+      <x>30</x>
+      <y>510</y>
+      <width>941</width>
+      <height>207</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_12">
+       <item>
+        <widget class="QLabel" name="label_16">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>54</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>85</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Inter SemiBold</family>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Статус:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="pBPortStatus">
+         <property name="font">
+          <font>
+           <family>Inter SemiBold</family>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(238, 87, 87);</string>
+         </property>
+         <property name="text">
+          <string>Закрыт</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QLabel" name="label_12">
+         <property name="font">
+          <font>
+           <family>Inter</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="styleSheet">
           <string notr="true">color: rgb(255, 255, 255);</string>
          </property>
@@ -1039,8 +1008,39 @@ background-color: rgb(76, 95, 170);</string>
        </item>
        <item>
         <widget class="QLineEdit" name="PEServerIP">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>600</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Inter</family>
+          </font>
+         </property>
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);</string>
+          <string notr="true">color: rgb(255, 255, 255);
+border-radius: 5px;
+border: 1px solid white;</string>
+         </property>
+         <property name="inputMask">
+          <string/>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="cursorPosition">
+          <number>0</number>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
         </widget>
        </item>
@@ -1050,6 +1050,12 @@ background-color: rgb(76, 95, 170);</string>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
         <widget class="QLabel" name="label_13">
+         <property name="font">
+          <font>
+           <family>Inter</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="styleSheet">
           <string notr="true">color: rgb(255, 255, 255);</string>
          </property>
@@ -1060,8 +1066,27 @@ background-color: rgb(76, 95, 170);</string>
        </item>
        <item>
         <widget class="QLineEdit" name="PEServerPort">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>600</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Inter</family>
+          </font>
+         </property>
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);</string>
+          <string notr="true">color: rgb(255, 255, 255);
+border-radius: 5px;
+border: 1px solid white;</string>
          </property>
         </widget>
        </item>
@@ -1071,6 +1096,12 @@ background-color: rgb(76, 95, 170);</string>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
         <widget class="QLabel" name="label_14">
+         <property name="font">
+          <font>
+           <family>Inter</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="styleSheet">
           <string notr="true">color: rgb(255, 255, 255);</string>
          </property>
@@ -1081,8 +1112,27 @@ background-color: rgb(76, 95, 170);</string>
        </item>
        <item>
         <widget class="QLineEdit" name="PEClientIP">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>600</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Inter</family>
+          </font>
+         </property>
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);</string>
+          <string notr="true">color: rgb(255, 255, 255);
+border-radius: 5px;
+border: 1px solid white;</string>
          </property>
         </widget>
        </item>
@@ -1092,6 +1142,12 @@ background-color: rgb(76, 95, 170);</string>
       <layout class="QHBoxLayout" name="horizontalLayout_4">
        <item>
         <widget class="QLabel" name="label_15">
+         <property name="font">
+          <font>
+           <family>Inter</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="styleSheet">
           <string notr="true">color: rgb(255, 255, 255);</string>
          </property>
@@ -1102,32 +1158,27 @@ background-color: rgb(76, 95, 170);</string>
        </item>
        <item>
         <widget class="QLineEdit" name="PEClientPort">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>600</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Inter</family>
+          </font>
+         </property>
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_5">
-       <item>
-        <widget class="QLabel" name="label_16">
-         <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);</string>
-         </property>
-         <property name="text">
-          <string>Статус</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="pBPortStatus">
-         <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);</string>
-         </property>
-         <property name="text">
-          <string>Закрыт</string>
+          <string notr="true">color: rgb(255, 255, 255);
+border-radius: 5px;
+border: 1px solid white;</string>
          </property>
         </widget>
        </item>
@@ -1138,44 +1189,509 @@ background-color: rgb(76, 95, 170);</string>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>760</y>
-      <width>811</width>
-      <height>56</height>
+      <x>30</x>
+      <y>730</y>
+      <width>941</width>
+      <height>52</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_3">
-     <item>
-      <widget class="QPushButton" name="pBUdpStart">
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(76, 95, 170);</string>
-       </property>
-       <property name="text">
-        <string>Открыть сетевое соединение</string>
-       </property>
-      </widget>
-     </item>
+    <layout class="QHBoxLayout" name="horizontalLayout_10">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
      <item>
       <widget class="QPushButton" name="pBUdpStop">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>40</height>
+        </size>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(76, 95, 170);</string>
+        <string notr="true">QPushButton{
+color: rgb(255, 255, 255);
+background-color: rgb(117, 126, 207);
+border-radius: 5;
+}
+QPushButton:hover {
+color: rgb(20, 20, 20);
+background-color: rgb(209, 214, 255);
+border-radius: 5;
+}</string>
        </property>
        <property name="text">
         <string>Закрыть сетевое соединение</string>
        </property>
       </widget>
      </item>
+     <item>
+      <widget class="QPushButton" name="pBUdpStart">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+color: rgb(255, 255, 255);
+background-color: rgb(117, 126, 207);
+border-radius: 5;
+}
+QPushButton:hover {
+color: rgb(20, 20, 20);
+background-color: rgb(209, 214, 255);
+border-radius: 5;
+}</string>
+       </property>
+       <property name="text">
+        <string>Открыть сетевое соединение</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>220</y>
+      <width>471</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_6">
+     <item>
+      <widget class="QLabel" name="label_9">
+       <property name="font">
+        <font>
+         <family>Inter SemiBold</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_10">
+       <property name="font">
+        <font>
+         <family>Inter SemiBold</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>200</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>110</y>
+      <width>471</width>
+      <height>72</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_8">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>Inter SemiBold</family>
+           <pointsize>12</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Счетчик осей:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="axis_counter">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>Inter</family>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>IBeamCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+border: 1px solid white;
+border-radius: 5px;
+</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <widget class="QLabel" name="label_5">
+         <property name="font">
+          <font>
+           <family>Inter SemiBold</family>
+           <pointsize>12</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Скорость :</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="Speed_in">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>Inter</family>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>IBeamCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+border: 1px solid white;
+border-radius: 5px;
+</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>70</y>
+      <width>471</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_9">
+     <property name="spacing">
+      <number>15</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_11">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Inter SemiBold</family>
+         <pointsize>12</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Время с момента запуска датчика (сек):</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="tm_disp">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Inter</family>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>ArrowCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+border: 1px solid white;
+border-radius: 5px;
+</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>20</y>
+      <width>941</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_11">
+     <property name="spacing">
+      <number>18</number>
+     </property>
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <item>
+      <widget class="QComboBox" name="comports">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Inter</family>
+         <pointsize>10</pointsize>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="acceptDrops">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(117, 126, 207);
+border-radius: 5;</string>
+       </property>
+       <property name="editable">
+        <bool>false</bool>
+       </property>
+       <property name="insertPolicy">
+        <enum>QComboBox::InsertAtBottom</enum>
+       </property>
+       <property name="sizeAdjustPolicy">
+        <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>10</width>
+         <height>10</height>
+        </size>
+       </property>
+       <property name="placeholderText">
+        <string>Выберите COM-порт</string>
+       </property>
+       <property name="duplicatesEnabled">
+        <bool>false</bool>
+       </property>
+       <property name="frame">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="sen_adr">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>200</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Inter</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::DefaultContextMenu</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+border: 1px solid white;
+border-radius: 5px;
+</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="placeholderText">
+        <string>Введите адрес датчика</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="connect">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>304</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Inter SemiBold</family>
+         <pointsize>10</pointsize>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+color: rgb(255, 255, 255);
+background-color: rgb(117, 126, 207);
+border-radius: 5;
+}
+QPushButton:hover {
+color: rgb(20, 20, 20);
+background-color: rgb(209, 214, 255);
+border-radius: 5;
+}</string>
+       </property>
+       <property name="text">
+        <string>Подключить</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <zorder>layoutWidget</zorder>
+   <zorder>label_4</zorder>
+   <zorder>zone_2</zorder>
+   <zorder>label_6</zorder>
+   <zorder>slow_pass</zorder>
+   <zorder>label_8</zorder>
+   <zorder>label_7</zorder>
+   <zorder>r32_4</zorder>
+   <zorder>r32_3</zorder>
+   <zorder>negative_pass</zorder>
+   <zorder>positive_pass</zorder>
+   <zorder>zone_1</zorder>
+   <zorder>verticalLayoutWidget</zorder>
+   <zorder>label_3</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>Speedom</zorder>
+   <zorder>label_16</zorder>
+   <zorder>pBPortStatus</zorder>
+   <zorder>zone_0</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>850</width>
+     <width>1000</width>
      <height>21</height>
     </rect>
    </property>

@@ -49,7 +49,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->positive_pass->setVisible(0);
     ui->negative_pass->setVisible(0);
     ui->slow_pass->setVisible(0);
-    ui->slow_pass->setStyleSheet("color: rgb(255, 0, 0)");
+    ui->slow_pass->setStyleSheet("color: rgb(255, 255, 255);");
     m_socket = new QUdpSocket(this);
 }
 
@@ -138,14 +138,13 @@ void MainWindow::on_connect_clicked()
     client.setConnectionParameter(QModbusDevice::SerialPortNameParameter,ui->comports->currentText());
     if(client.connectDevice())
     {
-        ui->connect->setText("Подключено!");
-        ui->connect->setStyleSheet("color: rgb(30, 89, 69)");
-        start_time = clock();
+        ui->connect->setText("Подключено");
+        ui->connect->setStyleSheet("background-color: rgb(71, 255, 90); color: rgb(20, 20, 20); border-radius: 5");
+
         QTimer::singleShot(buff_time, this, &MainWindow::readrequest);
     }
     else { qDebug() << "Device connection error"; }
 }
-
 
 
 
@@ -159,10 +158,12 @@ void MainWindow::on_pBUdpStart_clicked()
     if(result)
     {
         ui->pBPortStatus->setText("Открыт");
+        ui->pBPortStatus->setStyleSheet("color: rgb(71, 255, 90)");
     }
     else
     {
         ui->pBPortStatus->setText("Ошибка!");
+        ui->pBPortStatus->setStyleSheet("color: rgb(238, 87, 87);");
     }
 }
 
@@ -171,5 +172,6 @@ void MainWindow::on_pBUdpStop_clicked()
 {
     m_socket->close();
     ui->pBPortStatus->setText("Закрыт");
+    ui->pBPortStatus->setStyleSheet("color: rgb(238, 87, 87);");
 }
 
