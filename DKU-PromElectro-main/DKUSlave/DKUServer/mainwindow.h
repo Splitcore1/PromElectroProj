@@ -50,5 +50,6 @@ private slots:
     void wheel_zone1_exit();
     void wheel_zone0_enter();
     void wheel_zone0_exit();
+    void on_axis_amount_cursorPositionChanged(int arg1, int arg2);
 };
 #endif // MAINWINDOW_H

@@ -56,11 +56,11 @@ void MainWindow::on_Speed_Change(const QString &text)
     {
         speedpar = std::round(928.8/speedpar);
         serv.setData(QModbusDataUnit::HoldingRegisters,30,speedpar);
-        ui->speedEdit->setStyleSheet("border-width: 1px; border-style: solid; border-color: black;");
+        ui->speedEdit->setStyleSheet("border-width: 1px; border-style: solid; border-color: white; border-radius: 5px; color: white");
     }
     else
     {
-        ui->speedEdit->setStyleSheet("border-width: 1px; border-style: solid; border-color: red;");
+        ui->speedEdit->setStyleSheet("border-width: 1px; border-style: solid; border-color: red; border-radius: 5px; color: red;");
     }
 }
 
@@ -71,11 +71,11 @@ void MainWindow::on_Axis_Change(const QString &text)
     if (ok && axis <= 1023 && axis >= 0)
     {
         serv.setData(QModbusDataUnit::HoldingRegisters,29,axis);
-        ui->axis_amount->setStyleSheet("border-width: 1px; border-style: solid; border-color: black;");
+        ui->axis_amount->setStyleSheet("border-width: 1px; border-style: solid; border-color: white; border-radius: 5px; color: white");
     }
     else
     {
-        ui->axis_amount->setStyleSheet("border-width: 1px; border-style: solid; border-color: red;");
+        ui->axis_amount->setStyleSheet("border-width: 1px; border-style: solid; border-color: red; border-radius: 5px; color: red;");
     }
 }
 
@@ -110,7 +110,7 @@ void MainWindow::on_connect_clicked()
     if(serv.connectDevice())
     {
         ui->connect->setText("Подключено!");
-        ui->connect->setStyleSheet("color: rgb(30, 89, 69)");
+        ui->connect->setStyleSheet("border-radius: 5; background-color: rgb(71, 255, 90); color: rgb(20,20,20)");
     }
     else { qDebug() << "Device connection error"; }
 }

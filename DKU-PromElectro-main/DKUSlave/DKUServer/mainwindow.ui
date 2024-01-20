@@ -2,273 +2,799 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>545</width>
-    <height>623</height>
+    <width>500</width>
+    <height>720</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>500</width>
+    <height>720</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>ДКУ-02 Эмулятор</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(43, 43, 43);</string>
+   <string notr="true">background-color: rgb(21, 21, 25);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="3" column="1">
-     <widget class="QLineEdit" name="speedEdit">
-      <property name="autoFillBackground">
-       <bool>false</bool>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="0" colspan="2">
-     <widget class="QCheckBox" name="r32_2">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Обратное направление счета</string>
-      </property>
-     </widget>
-    </item>
-    <item row="12" column="0" colspan="2">
-     <widget class="QCheckBox" name="r32_9">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Неисправность ДКУ</string>
-      </property>
-     </widget>
-    </item>
-    <item row="15" column="0" colspan="2">
-     <widget class="QCheckBox" name="r32_12">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Постороннее воздействие на ДКУ</string>
-      </property>
-     </widget>
-    </item>
-    <item row="11" column="0" colspan="2">
-     <widget class="QCheckBox" name="r32_8">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Начальная установка</string>
-      </property>
-     </widget>
-    </item>
-    <item row="18" column="0" colspan="2">
-     <widget class="QCheckBox" name="r32_15">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Медленное движение колеса над датчиком</string>
-      </property>
-     </widget>
-    </item>
-    <item row="19" column="0" colspan="4">
-     <widget class="QLabel" name="label_3">
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Система инициализации .json скриптов</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="17" column="0" colspan="2">
-     <widget class="QCheckBox" name="r32_14">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Отклонение сигналов генераторов от нормы</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="0" colspan="2">
-     <widget class="QCheckBox" name="r32_0">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Наличие колеса в зоне 0</string>
-      </property>
-     </widget>
-    </item>
-    <item row="9" column="0" colspan="2">
-     <widget class="QCheckBox" name="r32_3">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Зафиксировано положительное направление прохода колеса</string>
-      </property>
-     </widget>
-    </item>
-    <item row="20" column="0">
-     <widget class="QLineEdit" name="script_address">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-     </widget>
-    </item>
-    <item row="14" column="0" colspan="2">
-     <widget class="QCheckBox" name="r32_11">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Чувствительность ниже нормы</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="label_2">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Значение скорости:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="QComboBox" name="comports">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Выберите COM-порт</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0" colspan="2">
-     <widget class="QPushButton" name="connect">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Подключить</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="label">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Значение для счетчика осей:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="20" column="1">
-     <widget class="QPushButton" name="choose_file">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Выбрать файл...</string>
-      </property>
-     </widget>
-    </item>
-    <item row="16" column="0" colspan="2">
-     <widget class="QCheckBox" name="r32_13">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Наличие постороннего металла в зоне ДКУ</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QLineEdit" name="axis_amount">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-     </widget>
-    </item>
-    <item row="10" column="0" colspan="2">
-     <widget class="QCheckBox" name="r32_4">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Зафиксировано отрицательное направление прохода колеса</string>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="0" colspan="2">
-     <widget class="QCheckBox" name="r32_1">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Наличие колеса в зоне 1</string>
-      </property>
-     </widget>
-    </item>
-    <item row="13" column="0" colspan="2">
-     <widget class="QCheckBox" name="r32_10">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Съем ДКУ</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QLineEdit" name="sen_adr">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="placeholderText">
-       <string>Введите адрес сенсора</string>
-      </property>
-     </widget>
-    </item>
-    <item row="21" column="0" colspan="2">
-     <widget class="QPushButton" name="initialize">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Инициализировать</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>4</x>
+      <y>10</y>
+      <width>494</width>
+      <height>699</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_5">
+     <property name="spacing">
+      <number>15</number>
+     </property>
+     <property name="leftMargin">
+      <number>20</number>
+     </property>
+     <property name="topMargin">
+      <number>20</number>
+     </property>
+     <property name="rightMargin">
+      <number>20</number>
+     </property>
+     <property name="bottomMargin">
+      <number>20</number>
+     </property>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <item>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <property name="verticalSpacing">
+            <number>15</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QComboBox" name="comports">
+             <property name="minimumSize">
+              <size>
+               <width>242</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Inter</family>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-radius: 5;
+background-color: rgb(117, 126, 207);
+color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="placeholderText">
+              <string>Выберите COM-порт</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="sen_adr">
+             <property name="minimumSize">
+              <size>
+               <width>179</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Inter</family>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);
+border-radius: 5;
+border: 1px solid white;</string>
+             </property>
+             <property name="placeholderText">
+              <string>Введите адрес сенсора</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="QPushButton" name="connect">
+             <property name="minimumSize">
+              <size>
+               <width>441</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Inter SemiBold</family>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+border-radius: 5;
+background-color: rgb(117, 126, 207);
+color: rgb(255, 255, 255);
+}
+QPushButton:hover{
+border-radius: 5;
+background-color: rgb(209, 214, 255);
+color: rgb(20, 20, 20);
+}</string>
+             </property>
+             <property name="text">
+              <string>Подключить</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QLabel" name="label_2">
+               <property name="minimumSize">
+                <size>
+                 <width>250</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Inter</family>
+                 <pointsize>9</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(255, 255, 255);</string>
+               </property>
+               <property name="text">
+                <string>Значение скорости</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="speedEdit">
+               <property name="minimumSize">
+                <size>
+                 <width>190</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Inter</family>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
+               <property name="autoFillBackground">
+                <bool>false</bool>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(255, 255, 255);
+border-radius: 5;
+border: 1px solid white;</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QLabel" name="label">
+               <property name="minimumSize">
+                <size>
+                 <width>250</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Inter</family>
+                 <pointsize>9</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(255, 255, 255);</string>
+               </property>
+               <property name="text">
+                <string>Значение для счетчика осей</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="axis_amount">
+               <property name="minimumSize">
+                <size>
+                 <width>190</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Inter</family>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(255, 255, 255);
+border-radius: 5;
+border: 1px solid white;</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <item>
+            <widget class="QCheckBox" name="r32_0">
+             <property name="font">
+              <font>
+               <family>Inter</family>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QCheckBox{
+color: rgb(255,255,255)
+}
+QCheckBox:indicator:unchecked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: white;
+}
+QCheckBox:indicator:checked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: rgb(117, 126, 207);
+}</string>
+             </property>
+             <property name="text">
+              <string>Наличие колеса в зоне 0</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="r32_1">
+             <property name="font">
+              <font>
+               <family>Inter</family>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QCheckBox{
+color: rgb(255,255,255)
+}
+QCheckBox:indicator:unchecked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: white;
+}
+QCheckBox:indicator:checked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: rgb(117, 126, 207);
+}</string>
+             </property>
+             <property name="text">
+              <string>Наличие колеса в зоне 1</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="r32_2">
+             <property name="font">
+              <font>
+               <family>Inter</family>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QCheckBox{
+color: rgb(255,255,255)
+}
+QCheckBox:indicator:unchecked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: white;
+}
+QCheckBox:indicator:checked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: rgb(117, 126, 207);
+}</string>
+             </property>
+             <property name="text">
+              <string>Обратное направление счета</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="r32_3">
+             <property name="font">
+              <font>
+               <family>Inter</family>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QCheckBox{
+color: rgb(255,255,255)
+}
+QCheckBox:indicator:unchecked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: white;
+}
+QCheckBox:indicator:checked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: rgb(117, 126, 207);
+}</string>
+             </property>
+             <property name="text">
+              <string>Зафиксировано положительное направление прохода колеса</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="r32_4">
+             <property name="font">
+              <font>
+               <family>Inter</family>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QCheckBox{
+color: rgb(255,255,255)
+}
+QCheckBox:indicator:unchecked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: white;
+}
+QCheckBox:indicator:checked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: rgb(117, 126, 207);
+}</string>
+             </property>
+             <property name="text">
+              <string>Зафиксировано отрицательное направление прохода колеса</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="r32_8">
+             <property name="font">
+              <font>
+               <family>Inter</family>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QCheckBox{
+color: rgb(255,255,255)
+}
+QCheckBox:indicator:unchecked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: white;
+}
+QCheckBox:indicator:checked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: rgb(117, 126, 207);
+}</string>
+             </property>
+             <property name="text">
+              <string>Начальная установка</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="r32_9">
+             <property name="font">
+              <font>
+               <family>Inter</family>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QCheckBox{
+color: rgb(255,255,255)
+}
+QCheckBox:indicator:unchecked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: white;
+}
+QCheckBox:indicator:checked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: rgb(117, 126, 207);
+}</string>
+             </property>
+             <property name="text">
+              <string>Неисправность ДКУ</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="r32_10">
+             <property name="font">
+              <font>
+               <family>Inter</family>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QCheckBox{
+color: rgb(255,255,255)
+}
+QCheckBox:indicator:unchecked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: white;
+}
+QCheckBox:indicator:checked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: rgb(117, 126, 207);
+}</string>
+             </property>
+             <property name="text">
+              <string>Съем ДКУ</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="r32_11">
+             <property name="font">
+              <font>
+               <family>Inter</family>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QCheckBox{
+color: rgb(255,255,255)
+}
+QCheckBox:indicator:unchecked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: white;
+}
+QCheckBox:indicator:checked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: rgb(117, 126, 207);
+}</string>
+             </property>
+             <property name="text">
+              <string>Чувствительность ниже нормы</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="r32_12">
+             <property name="font">
+              <font>
+               <family>Inter</family>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QCheckBox{
+color: rgb(255,255,255)
+}
+QCheckBox:indicator:unchecked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: white;
+}
+QCheckBox:indicator:checked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: rgb(117, 126, 207);
+}</string>
+             </property>
+             <property name="text">
+              <string>Постороннее воздействие на ДКУ</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="r32_13">
+             <property name="font">
+              <font>
+               <family>Inter</family>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QCheckBox{
+color: rgb(255,255,255)
+}
+QCheckBox:indicator:unchecked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: white;
+}
+QCheckBox:indicator:checked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: rgb(117, 126, 207);
+}</string>
+             </property>
+             <property name="text">
+              <string>Наличие постороннего металла в зоне ДКУ</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="r32_14">
+             <property name="font">
+              <font>
+               <family>Inter</family>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QCheckBox{
+color: rgb(255,255,255)
+}
+QCheckBox:indicator:unchecked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: white;
+}
+QCheckBox:indicator:checked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: rgb(117, 126, 207);
+}</string>
+             </property>
+             <property name="text">
+              <string>Отклонение сигналов генераторов от нормы</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="r32_15">
+             <property name="font">
+              <font>
+               <family>Inter</family>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QCheckBox{
+color: rgb(255,255,255)
+}
+QCheckBox:indicator:unchecked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: white;
+}
+QCheckBox:indicator:checked{
+width: 15px;
+height: 15px;
+border-radius: 2px;
+border: 2px solid white;
+background-color: rgb(117, 126, 207);
+}</string>
+             </property>
+             <property name="text">
+              <string>Медленное движение колеса над датчиком</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="font">
+          <font>
+           <family>Inter SemiBold</family>
+           <pointsize>10</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Система инициализации .json скриптов</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout">
+         <property name="horizontalSpacing">
+          <number>20</number>
+         </property>
+         <property name="verticalSpacing">
+          <number>15</number>
+         </property>
+         <item row="1" column="0" colspan="2">
+          <widget class="QPushButton" name="initialize">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Inter SemiBold</family>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+border-radius: 5;
+background-color: rgb(117, 126, 207);
+color: rgb(255, 255, 255);
+}
+QPushButton:hover{
+border-radius: 5;
+background-color: rgb(209, 214, 255);
+color: rgb(20, 20, 20);
+}</string>
+           </property>
+           <property name="text">
+            <string>Инициализировать</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="choose_file">
+           <property name="minimumSize">
+            <size>
+             <width>180</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Inter SemiBold</family>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+border-radius: 5;
+background-color: rgb(117, 126, 207);
+color: rgb(255, 255, 255);
+}
+QPushButton:hover{
+border-radius: 5;
+	background-color: rgb(209, 214, 255);
+color: rgb(20, 20, 20);
+}</string>
+           </property>
+           <property name="text">
+            <string>Выбрать файл...</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLineEdit" name="script_address">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);
+border-radius: 5;
+border: 1px solid white;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>545</width>
+     <width>500</width>
      <height>21</height>
     </rect>
    </property>
