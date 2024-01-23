@@ -57,7 +57,7 @@ void MainWindow::on_pB_port1Send_clicked()
     //сформировать сообщение для показа в окне принятых и отправленных
     str = "Sended to "+RemoteAddress.toString()+":"+message;
     //показать отправленное сообщение в окне принятых и отправленных
-     ui->pTE_port1Recieved->appendPlainText(str);
+     //ui->pTE_port1Recieved->appendPlainText(str);
 }
 void MainWindow::ReadyRead()
 {
@@ -76,6 +76,10 @@ if(mass.size()>0)
 //сформировать сообщение для показа в окне принятых и отправленных
 str = "Received from "+SenderAddress.toString()+":"+ReadedData;
 //показать отправленное сообщение в окне принятых и отправленных
- ui->pTE_port1Recieved->appendPlainText(ReadedData);
+ //ui->pTE_port1Recieved->appendPlainText(ReadedData);
+ if(ReadedData == "0")
+ {
+     ui->pushButton->setStyleSheet("background-color: rgb(170, 0, 0);");
+ }
 }
 }
