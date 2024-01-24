@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/new/icons">
+        <file>Icons/No_train.svg</file>
+        <file>Icons/With_train.svg</file>
+    </qresource>
+</RCC>

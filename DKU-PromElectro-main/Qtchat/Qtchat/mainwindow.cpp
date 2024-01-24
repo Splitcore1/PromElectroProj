@@ -28,9 +28,15 @@ void MainWindow::on_pB_port1Open_clicked()
      result=m_socket->bind(Address, Port.toInt());
     //если открыли успешно, то вывод сообщения
      if(result)
-     ui->lb_port1Status->setText("Открыт");
+     {
+        ui->lb_port1Status->setText("Открыт");
+        ui->lb_port1Status->setStyleSheet("color: rgb(71, 255, 90)");
+     }
      else
-     ui->lb_port1Status->setText("Ошибка!");
+     {
+        ui->lb_port1Status->setText("Ошибка");
+        ui->lb_port1Status->setStyleSheet("color: rgb(238, 87, 87);");
+     }
 }
 
 
@@ -38,6 +44,7 @@ void MainWindow::on_pB_port1Close_clicked()
 {
     m_socket->close();
      ui->lb_port1Status->setText("Закрыт");
+     ui->lb_port1Status->setStyleSheet("color: rgb(238, 87, 87);");
 }
 
 
@@ -77,9 +84,10 @@ if(mass.size()>0)
 str = "Received from "+SenderAddress.toString()+":"+ReadedData;
 //показать отправленное сообщение в окне принятых и отправленных
  //ui->pTE_port1Recieved->appendPlainText(ReadedData);
- if(ReadedData == "0")
+ if(ReadedData == "1")
  {
-     ui->pushButton->setStyleSheet("background-color: rgb(170, 0, 0);");
+     ui->colorIndicate->setStyleSheet("background-image: url(:/new/icons/Icons/With_train.svg);");
+     ui->trainStatus->setText("ПОЕЗД НА УЧАСТКЕ ДКУ");
  }
 }
 }
