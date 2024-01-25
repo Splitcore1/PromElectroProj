@@ -86,8 +86,13 @@ str = "Received from "+SenderAddress.toString()+":"+ReadedData;
  //ui->pTE_port1Recieved->appendPlainText(ReadedData);
  if(ReadedData == "1")
  {
-     ui->colorIndicate->setStyleSheet("background-image: url(:/new/icons/Icons/With_train.svg);");
+     ui->colorIndicate->setStyleSheet("background-image: url(:/new/icons/Icons/With_train.svg); border-radius: 30px;");
      ui->trainStatus->setText("ПОЕЗД НА УЧАСТКЕ ДКУ");
+ }
+ if(ReadedData == "0")
+ {
+     ui->colorIndicate->setStyleSheet("background-image: url(:/new/icons/Icons/No_train.svg); border-radius: 30px;");
+     ui->trainStatus->setText("ПОЕЗДА НЕТ НА УЧАСТКЕ ДКУ");
  }
 }
 }
